@@ -64,7 +64,7 @@
                 </div>
 
                 <div class="button">
-                    <a href="#" class="btn btn-dark me-2 cta" id="Agediff" name="Agediff">Check</a>
+                    <a href="#" class="btn btn-dark me-2 cta" id="Agediff" name="Agediff">Get Remaining weeks</a>
                 </div>
                
 
@@ -79,9 +79,9 @@
                     let Adediff = document.getElementById("Agediff")
 
 
-                    Agediff.addEventListener("click", countdown)
+                    Agediff.addEventListener("click", calculate)
                     
-                    function countdown(){
+                    function calculate(){
 
                             let  CurrAge = CurrentAge.value;
                             let  daysLeft = (90 - CurrAge) * 365;
@@ -96,7 +96,7 @@
                                 alert("Kindly enter Correct Age");
 
                             } else{
-                                textDisplay.value = "You have " + daysLeft + " days, " + weeksLeft + " weeks, and " + monthsLeft + " months left";
+                                textDisplay.value = "You have " + daysLeft + " days, " + weeksLeft + " weeks, & " + monthsLeft + " months left";
                             }
 
                     };

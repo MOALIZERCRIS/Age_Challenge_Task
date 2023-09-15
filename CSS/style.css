@@ -12,7 +12,7 @@ textarea{
 }
 
 input{
-    width: 80%;
+    width: 90%;
     outline: none;
     height: 20px;
     padding: 15px;
@@ -28,8 +28,8 @@ h1{
     align-items: center;
 }
 .case{
-    background-color: #2219a7;
-    color: #eee;
+    background-color: #5e5999;
+  
     border: 15px ;
     border-radius: 10px;
 }
