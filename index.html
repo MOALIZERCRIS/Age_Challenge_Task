@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATE COUNTER</title>
+    <link
+    href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900"
+    rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900"
+    rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <section class="container-fluid">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container case">
+                    <a class="navbar-brand" href="index.html"><span class="fa fa-stethoscope me-1 fs-1"></span>Health Info</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav ms-auto">
+                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="">Services</a>
+                            <a class="nav-link" href="#">Portfolio</a>
+                            <a class="nav-link" href="#">About Us</a>
+                            <a class="nav-link" href="#">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+    
+    </section>
+
+
+
+<section class="container main banner">
+        <div class="row">
+            <div class="col-md-6 justify-content-center p-5 py-5 ms-5">
+                <h1>DAYS COUNTER</h1>
+            </div>
+        </div>
+
+        <div class="row justify-content-center ">
+            <div class="col-md-4 col-lg-6 p-5 py-5 case">
+                <h3>Discover years left to live</h3>
+                <p>Please eter your birth details in the space provided below.</p>
+
+                <div class="form-group">
+                    <input type="text" class="CurrentAge" id="CurrentAge" name="CurrentAge">
+                </div>
+
+                <div class="form-group ">
+                    <input type="text" class="input-control disabled" id="txtDisplay" disabled placeholder="Remaining years is">
+                </div>
+
+                <div>
+                    <a href="#" class="btn btn-dark me-2 cta" id="Agediff" name="Agediff">Check</a>
+                </div>
+               
+
+            </div>
+        </div>
+    </section>
+
+                <script>
+
+                    let CurrAge = document.getElementById("CurrentAge");
+                    let textDisplay = document.getElementById("txtDisplay");
+                    let Adediff = document.getElementById("Agediff")
+
+
+                    Agediff.addEventListener("click", countdown)
+                    
+                    function countdown(){
+
+                            let  CurrAge = CurrentAge.value;
+                            let  daysLeft = (90 - CurrAge) * 365;
+                            let  weeksLeft = (90 - CurrAge) * 52;
+                            let  monthsLeft= (90 - CurrAge) * 12;
+
+                          
+                            textDisplay.value = ("You have " + daysLeft + " days, " + weeksLeft + " weeks, and " + monthsLeft + " months left.");
+
+                            
+                                
+                            if (textDisplay.value > 90 ){
+                                alert("Kindly enter Correct Age");
+
+                            } else{
+                                textDisplay.value = "You have " + daysLeft + " days, " + weeksLeft + " weeks, and " + monthsLeft + " months left";
+                            }
+
+                    };
+
+                </script>
+
+
+                    <section class="footer">
+                       <P>Health info &COPY; 2023. All Rights Reserved</P> 
+                    </section>
+            
+            </body>
+            </html>
+        
+</html>
+</html>
+</html>
